@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Question Generator</title>
+</head>
+
+<body>
+    <h1>PW RTQ Generator</h1>
+    <button onclick="generateRandomQuestion()">Generate Question</button>
+    <p id="randomQuestion"></p>
+
+    <script>
+        // Array of questions
+        const questions = [
+            "Which is the most innovative feature of your solution?",
+            "How do you measure the success of your project?",
+            "What are some limitations of your primary research?",
+            "What is the most significant impact of your project?",
+            "Which aspect of your solution will be the most challenging to implement?",
+            "How can you improve the appeal of your solution?",
+            "How can you promote hawker culture to migrant workers?",
+            "How can you enhance the impact of watching appropriate content for the elderly by making it more hawker-oriented?",
+            "How can you make learning more elderly-oriented for the hawkers?",
+            "How can you improve Singapore's total fertility rate between elderly and the migrant workers?"
+        ];
+
+        function generateRandomQuestion() {
+            // Randomly select a question from the array
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            const selectedQuestion = questions[randomIndex];
+
+            // Display the selected question
+            document.getElementById("randomQuestion").textContent = selectedQuestion;
+        }
+    </script>
+</body>
+
+</html>
